@@ -5,14 +5,14 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var React = require('react');
-var Test = (function (_super) {
-    __extends(Test, _super);
-    function Test(props) {
+var Skills = (function (_super) {
+    __extends(Skills, _super);
+    function Skills(props) {
         _super.call(this, props);
     }
-    Test.prototype.render = function () {
-        return React.createElement("p", null, "Hello World@!");
+    Skills.prototype.render = function () {
+        return React.createElement("div", {className: "col-md-5"}, React.createElement("h2", null, "Skills"));
     };
-    return Test;
+    return Skills;
 })(React.Component);
-exports.Test = Test;
+exports.Skills = Skills;

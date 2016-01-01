@@ -1,11 +1,7 @@
 import * as React from 'react';
 
-export interface HelloProps {
-    name: string;
-}
-
-export class Test extends React.Component<{}, any> {
-    constructor(props: HelloProps) {
+export class Test extends React.Component<any, any> {
+    constructor(props) {
         super(props);
     }
 
