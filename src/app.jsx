@@ -16,8 +16,10 @@ var mainBlockStyle= {
   padding: '0 30 30 30'
 }
 
-var Hello = React.createClass({
+var App = React.createClass({
   render: function() {
+  
+    var t=this.props.children;
     return <div>
         <div className="container" style={mainBlockStyle}>
           <Header />
@@ -38,6 +40,18 @@ var Hello = React.createClass({
 
   }
 });
+module.exports =App;
+// var Router = require('react-router');
+// var Route = Router.Route;
+//
+// var routes = (
+//   <Route path="/" handler={App}>
+//   </Route>
+// );
+//
+// Router.run(routes, function(Root) {
+//   React.render(<Root />, document.getElementById('container'));
+// });
 
-var element = React.createElement(Hello, {});
-React.render(element, document.querySelector('#container'));
+// var element = React.createElement(Hello, {});
+// React.render(element, document.querySelector('#container'));
