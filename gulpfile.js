@@ -46,7 +46,7 @@ var notify = function(error) {
 };
 
 var bundler = watchify(browserify({
-  entries: ['./src/route.jsx'],
+  entries: ['./src/main.jsx'],
   transform: [reactify],
   extensions: ['js','.jsx'],
   debug: true,

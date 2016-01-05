@@ -4,7 +4,6 @@ export class EduAndExp extends React.Component<any, any> {
     constructor(props) {
         super(props);
     }
-
     render() {
         return <div className="col-md-7">
                       <h2>Education& Experience</h2>

@@ -4,13 +4,13 @@ var Router=ReactRouter.Router;
 var React = require("react");
 
 var App = require('./app.jsx');
-// var Summary = require('./components/summary').Summary
-// <Route path="test" component={Summary}/>
+
 var routes = (
   <Router>
     <Route path="/" component={App}>
 
     </Route>
+
   </Router>
 );
 

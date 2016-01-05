@@ -1,5 +1,4 @@
-window.jQuery = $ = require('jquery');
-var bootstrap = require('bootstrap/dist/js/bootstrap');
+
 
 var React = require('react');
 var Header = require('./components/header').Header;
@@ -17,8 +16,9 @@ var mainBlockStyle= {
 }
 
 var App = React.createClass({
-  render: function() {
   
+  render: function() {
+
     var t=this.props.children;
     return <div>
         <div className="container" style={mainBlockStyle}>

@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "alt": "^0.18.1",
     "bootstrap": "^3.3.6",
     "browserify": "^9.0.3",
     "firebase": "^2.3.2",
