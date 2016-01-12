@@ -20,18 +20,36 @@ var ref = new Firebase("https://sizzling-torch-9797.firebaseio.com");
 // }, function(errorObject) {
 //   console.log("The read failed: " + errorObject.code);
 // });
+// ref.authWithPassword({
+//   email    : "bobtony@firebase.com",
+//   password : "correcthorsebatterystaple"
+// }, function(error, authData) {
+//   if (error) {
+//     console.log("Login Failed!", error);
+//   } else {
+//     console.log("Authenticated successfully with payload:", authData.uid);
+//     var userssFirebaseRef = new Firebase("https://sizzling-torch-9797.firebaseio.com/users/"+authData.uid);
+//         userssFirebaseRef.set({
+//           user:authData.uid,
+//           test: 'zzzzzz'
+//         });
+//   }
+// });
+var ref = new Firebase("https://sizzling-torch-9797.firebaseio.com");
 ref.authWithPassword({
-  email    : "bobtony@firebase.com",
-  password : "correcthorsebatterystaple"
+  email    : "li.anchen.au@gmail.com",
+  password : "aA811204"
 }, function(error, authData) {
   if (error) {
     console.log("Login Failed!", error);
   } else {
-    console.log("Authenticated successfully with payload:", authData.uid);
-    var userssFirebaseRef = new Firebase("https://sizzling-torch-9797.firebaseio.com/users/"+authData.uid);
-        userssFirebaseRef.set({
-          user:authData.uid,
-          test: 'zzzzzz'
-        });
+    console.log("Authenticated successfully with payload:", authData);
+    var ref = new Firebase("https://sizzling-torch-9797.firebaseio.com"+"/users/"+authData.uid);
+    ref.set({
+      summary:'Full stack developer, Single-page application development experience with Angularjs, ASP.NET, webSocket, WIF, WCF.Development language: Java, Typescript, C#, PHP.Javascript',
+      eduExp:[{header:'2001-2003',content:'test'}],
+      recentProjects:['testproject1'],
+      skills:['testskill1'],
+    });
   }
 });

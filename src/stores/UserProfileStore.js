@@ -7,20 +7,24 @@ var __extends = (this && this.__extends) || function (d, b) {
 var alt_1 = require("../alt");
 var DataLoadAction_1 = require("../actions/DataLoadAction");
 var StoreBase_1 = require("./StoreBase");
+var Firebase = require("firebase");
 var ProfileStore = (function (_super) {
     __extends(ProfileStore, _super);
     function ProfileStore() {
         _super.call(this);
-        this.locations = [];
-        this.errorMessage = null;
         this.bindListeners({
             handleFetchUsrProfile: DataLoadAction_1.dataLoadActions.fetchUsrProfile,
         });
     }
     ProfileStore.prototype.handleFetchUsrProfile = function (uid) {
-        console.log("store listen to " + uid);
+        var ref = new Firebase("https://sizzling-torch-9797.firebaseio.com/users/" + uid);
         var that = this;
-        that.setState({});
+        ref.on("value", function (snapshot) {
+            that.setState({ User: snapshot.val() });
+        }, function (errorObject) {
+            console.log("The read failed: " + errorObject.code);
+        });
+        return false;
     };
     return ProfileStore;
 })(StoreBase_1.AbstractStoreModel);

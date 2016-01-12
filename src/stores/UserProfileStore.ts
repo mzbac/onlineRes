@@ -1,28 +1,25 @@
 import {alt} from "../alt";
 import {dataLoadActions} from "../actions/DataLoadAction";
 import {AbstractStoreModel} from "./StoreBase";
+var Firebase = require("firebase");
 
-export interface Location {
-  id?:number;
-  name?:string;
-  has_favorite?:boolean;
+export interface UserProfile {
+  summary: string;
+  eduExp: Array<{}>;
+  recentProjects: Array<string>;
+  skills: Array<string>;
 }
 
 interface State {
-  locations: Array<Location>;
-  errorMessage:string;
+  User: UserProfile;
+
 }
 
 
 class ProfileStore extends AbstractStoreModel<State> {
-
-  locations: Array<Location>;
-  errorMessage:string;
-
+  User: UserProfile;
   constructor() {
     super();
-    this.locations = [];
-    this.errorMessage = null;
     this.bindListeners({
       handleFetchUsrProfile: dataLoadActions.fetchUsrProfile,
     });
@@ -30,11 +27,16 @@ class ProfileStore extends AbstractStoreModel<State> {
 
   }
 
-  handleFetchUsrProfile(uid:string) {
-    console.log("store listen to "+uid);
-    //atom can't get the baseclass defination, use that = this as a workaround
-    var that:any =this;
-    that.setState({})
+  handleFetchUsrProfile(uid: string) {
+    var ref = new Firebase("https://sizzling-torch-9797.firebaseio.com/users/"+uid);
+    var that: any = this;
+    ref.on("value", function(snapshot) {
+      that.setState({ User: snapshot.val() });
+    }, function(errorObject) {
+        console.log("The read failed: " + errorObject.code);
+      });
+    //action handler return false then store state don'change
+     return false;
   }
 
 
