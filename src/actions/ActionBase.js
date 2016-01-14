@@ -1,4 +1,3 @@
-"use strict";
 var AbstractActions = (function () {
     function AbstractActions(alt) {
     }

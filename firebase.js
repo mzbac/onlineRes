@@ -49,7 +49,11 @@ ref.authWithPassword({
       summary:'Full stack developer, Single-page application development experience with Angularjs, ASP.NET, webSocket, WIF, WCF.Development language: Java, Typescript, C#, PHP.Javascript',
       eduExp:[{header:'2001-2003',content:'test'}],
       recentProjects:['testproject1'],
-      skills:['testskill1'],
+      skills:{chartDate:'test'},
+      contacts:{email:"anchen.li86@gmail.com",
+        linkedin:"https://www.linkedin.com/profile/view?id=AAMAAAs-fL0Bca02Fisp7UZoHFQeJ93qy_Ot_CM",
+        phoneNumber:"000999000"
+      }
     });
   }
 });

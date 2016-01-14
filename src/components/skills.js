@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -11,7 +10,7 @@ var Skills = (function (_super) {
         _super.call(this, props);
     }
     Skills.prototype.render = function () {
-        return React.createElement("div", {className: "col-md-5"}, React.createElement("h2", null, "Skills"));
+        return React.createElement("div", {"className": "col-md-5"}, React.createElement("h2", null, "Skills"));
     };
     return Skills;
 })(React.Component);

@@ -1,4 +1,3 @@
-"use strict";
 var AbstractStoreModel = (function () {
     function AbstractStoreModel() {
     }

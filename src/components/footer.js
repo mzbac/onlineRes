@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -10,7 +9,7 @@ var footerStyle = {
     color: '#000',
     textAlign: 'center',
     paddingTop: '20',
-    paddingBottom: '20',
+    paddingBottom: '20'
 };
 var Footer = (function (_super) {
     __extends(Footer, _super);
@@ -18,7 +17,7 @@ var Footer = (function (_super) {
         _super.call(this, props);
     }
     Footer.prototype.render = function () {
-        return React.createElement("footer", {style: footerStyle}, React.createElement("div", {className: "container"}, React.createElement("p", null, "Copyright © 2015, All Rights Reserved")));
+        return React.createElement("footer", {"style": footerStyle}, React.createElement("div", {"className": "container"}, React.createElement("p", null, "Copyright © 2015, All Rights Reserved")));
     };
     return Footer;
 })(React.Component);

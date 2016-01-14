@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -37,7 +36,7 @@ var Header = (function (_super) {
         _super.call(this, props);
     }
     Header.prototype.render = function () {
-        return (React.createElement("div", null, React.createElement("img", {src: "img/person.png", style: profile_img}), React.createElement("header", null, React.createElement("h1", {className: "primary-color", style: hl}, "Software Developer")), React.createElement("div", {style: divider})));
+        return (React.createElement("div", null, React.createElement("img", {"src": "img/person.png", "style": profile_img}), React.createElement("header", null, React.createElement("h1", {"className": "primary-color", "style": hl}, "Software Developer")), React.createElement("div", {"style": divider})));
     };
     return Header;
 })(React.Component);
