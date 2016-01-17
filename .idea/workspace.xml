@@ -1,36 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="357702dc-9b64-43af-928f-815ad4def576" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/login.jsx" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/typings/alt/alt.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/typings/es6-promise/es6-promise.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/typings/react/react.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/typings/tsd.d.ts" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/firebase.js" afterPath="$PROJECT_DIR$/firebase.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/DataLoadAction.js" afterPath="$PROJECT_DIR$/src/actions/DataLoadAction.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/DataLoadAction.ts" afterPath="$PROJECT_DIR$/src/actions/DataLoadAction.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app.jsx" afterPath="$PROJECT_DIR$/src/app.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/contacts.js" afterPath="$PROJECT_DIR$/src/components/contacts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/contacts.tsx" afterPath="$PROJECT_DIR$/src/components/contacts.tsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/eduAndExp.js" afterPath="$PROJECT_DIR$/src/components/eduAndExp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/eduAndExp.tsx" afterPath="$PROJECT_DIR$/src/components/eduAndExp.tsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/header.js" afterPath="$PROJECT_DIR$/src/components/header.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/header.tsx" afterPath="$PROJECT_DIR$/src/components/header.tsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/recentProjects.js" afterPath="$PROJECT_DIR$/src/components/recentProjects.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/recentProjects.tsx" afterPath="$PROJECT_DIR$/src/components/recentProjects.tsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/skills.js" afterPath="$PROJECT_DIR$/src/components/skills.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/skills.tsx" afterPath="$PROJECT_DIR$/src/components/skills.tsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/summary.js" afterPath="$PROJECT_DIR$/src/components/summary.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/summary.tsx" afterPath="$PROJECT_DIR$/src/components/summary.tsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.jsx" afterPath="$PROJECT_DIR$/src/main.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/route.jsx" afterPath="$PROJECT_DIR$/src/route.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stores/UserProfileStore.js" afterPath="$PROJECT_DIR$/src/stores/UserProfileStore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stores/UserProfileStore.ts" afterPath="$PROJECT_DIR$/src/stores/UserProfileStore.ts" />
-    </list>
+    <list default="true" id="357702dc-9b64-43af-928f-815ad4def576" name="Default" comment="" />
     <ignored path="react.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -7880,7 +7851,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
