@@ -13,6 +13,9 @@ var DataLoadActions = (function (_super) {
     DataLoadActions.prototype.fetchUsrProfile = function (uid) {
         return uid;
     };
+    DataLoadActions.prototype.UpdateUsrSummary = function (summaryText, uid) {
+        return { summaryText: summaryText, uid: uid };
+    };
     return DataLoadActions;
 })(ActionBase_1.AbstractActions);
 exports.dataLoadActions = alt_1.alt.createActions(DataLoadActions);

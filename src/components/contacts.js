@@ -21,7 +21,7 @@ var Contacts = (function (_super) {
     Contacts.prototype.render = function () {
         var contacts;
         if (this.props.contactProp) {
-            contacts = (React.createElement("ul", {"style": contactListStyle}, React.createElement("li", {"style": contactListLiStyle}, React.createElement("i", {"className": "fa fa-linkedin-square fa-2x"}), React.createElement("span", null, React.createElement("a", {"style": { color: '#363636' }, "href": this.props.contactProp.linkedin}, "Linkedin"))), React.createElement("li", {"style": contactListLiStyle}, React.createElement("i", {"className": "fa fa-envelope fa-2x"}), this.props.contactProp.email), React.createElement("li", {"style": contactListLiStyle}, React.createElement("i", {"className": "fa fa-phone-square fa-2x"}), this.props.contactProp.phoneNumber)));
+            contacts = (React.createElement("ul", {"style": contactListStyle}, React.createElement("li", {"style": contactListLiStyle}, React.createElement("i", {"className": "fa fa-linkedin-square fa-2x"}), React.createElement("span", null, React.createElement("a", {"style": { color: '#363636' }, "href": this.props.contactProp.linkedin}, "Anchen Li"))), React.createElement("li", {"style": contactListLiStyle}, React.createElement("i", {"className": "fa fa-envelope fa-2x"}), this.props.contactProp.email), React.createElement("li", {"style": contactListLiStyle}, React.createElement("i", {"className": "fa fa-phone-square fa-2x"}), this.props.contactProp.phoneNumber)));
         }
         else {
             contacts = (React.createElement("div", null, React.createElement("i", {"className": "fa fa-spinner fa-spin fa-4x fa-fw margin-bottom"})));

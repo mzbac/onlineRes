@@ -4,13 +4,23 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var React = require('react');
+var ExperienceItem = require('./experienceListItem').ExperienceItem;
 var EduAndExp = (function (_super) {
     __extends(EduAndExp, _super);
     function EduAndExp(props) {
         _super.call(this, props);
     }
     EduAndExp.prototype.render = function () {
-        return React.createElement("div", {"className": "col-md-7"}, React.createElement("h2", null, "Education& Experience"), React.createElement("div", {"className": "media"}, React.createElement("div", {"className": "media-left"}, "2007-2009"), React.createElement("div", {"className": "media-body"}, React.createElement("h4", {"className": "media-heading"}, "heading"), React.createElement("p", null, "some texts"))));
+        var experience;
+        if (this.props.experienceList) {
+            experience = this.props.experienceList.map(function (listValue) {
+                return React.createElement(ExperienceItem, {"itemHeader": listValue.itemHeader, "itemContentHeader": listValue.itemContentHeader, "itemContent": listValue.itemContent});
+            });
+        }
+        else {
+            experience = (React.createElement("div", null, React.createElement("i", {"className": "fa fa-spinner fa-spin fa-4x fa-fw margin-bottom"})));
+        }
+        return React.createElement("div", {"className": "col-md-7"}, React.createElement("h2", null, "Education & Experience"), experience);
     };
     return EduAndExp;
 })(React.Component);

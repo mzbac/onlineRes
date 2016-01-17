@@ -11,16 +11,22 @@ export class Projects extends React.Component<any, any> {
     }
 
     render() {
+        var projects;
+        if (this.props.projectsList) {
+            projects = this.props.projectsList.map(function (listValue) {
+                return  <h5 style={ProjectLiStyle}>{listValue}</h5>
+                });
+        } else {
+            projects = (<div>
+                <i className="fa fa-spinner fa-spin fa-4x fa-fw margin-bottom"></i>
+            </div>);
+        }
         return <div className="col-md-12">
-                      <h2>Recent Projects</h2>
-                      <ul className="work-list">
-                        <li style={ProjectLiStyle}>#1</li>
-                        <li style={ProjectLiStyle}>#2</li>
-                        <li style={ProjectLiStyle}>#3</li>
-                        <li style={ProjectLiStyle}>#4</li>
-                        <li style={ProjectLiStyle}>#5</li>
-                          </ul>
-            </div>;
+            <h2>Recent Projects</h2>
+
+            {projects}
+
+        </div>;
 
     }
 }

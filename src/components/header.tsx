@@ -32,14 +32,26 @@ export class Header extends React.Component<any, any> {
     }
 
     render() {
-        return (
-            <div>
-              <img src="img/person.png" style={profile_img}/>
-                  <header>
+        var header;
+        if(this.props.headerImg){
+            header= (<div>
+                <img src={this.props.headerImg} style={profile_img}/>
+                <header>
                     <h1 className="primary-color" style={hl}>Software Developer</h1>
-                  </header>
-                  <div style={divider}></div>
-                </div>
-        );
+                </header>
+                <div style={divider}></div>
+            </div>);
+        }else{
+            header =(<div>
+                <img src="img/person.png" style={profile_img}/>
+                <header>
+                    <h1 className="primary-color" style={hl}>Software Developer</h1>
+                </header>
+                <div style={divider}></div>
+            </div>);
+        }
+        return (<div>
+        {header}
+            </div>);
     }
 }

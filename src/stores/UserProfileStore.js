@@ -12,7 +12,8 @@ var ProfileStore = (function (_super) {
     function ProfileStore() {
         _super.call(this);
         this.bindListeners({
-            handleFetchUsrProfile: DataLoadAction_1.dataLoadActions.fetchUsrProfile
+            handleFetchUsrProfile: DataLoadAction_1.dataLoadActions.fetchUsrProfile,
+            handleUpdateUsrSummary: DataLoadAction_1.dataLoadActions.UpdateUsrSummary
         });
     }
     ProfileStore.prototype.handleFetchUsrProfile = function (uid) {
@@ -24,6 +25,22 @@ var ProfileStore = (function (_super) {
             console.log("The read failed: " + errorObject.code);
         });
         //action handler return false then store state don'change
+        return false;
+    };
+    ProfileStore.prototype.handleUpdateUsrSummary = function (req) {
+        var that = this;
+        that.User.summary = req.summaryText;
+        var onComplete = function (error) {
+            if (error) {
+                console.log('Synchronization failed');
+            }
+            else {
+                console.log('Synchronization succeeded');
+                that.setState({ User: that.User });
+            }
+        };
+        var ref = new Firebase("https://sizzling-torch-9797.firebaseio.com/users/" + req.uid);
+        ref.update({ summary: req.summaryText }, onComplete);
         return false;
     };
     return ProfileStore;

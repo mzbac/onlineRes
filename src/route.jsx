@@ -1,17 +1,21 @@
 var ReactRouter = require('react-router');
 var Route = ReactRouter.Route;
-var Router=ReactRouter.Router;
+var Router = ReactRouter.Router;
 var React = require("react");
 
 var App = require('./app.jsx');
+var Login = require('./login.jsx');
+
 
 var routes = (
-  <Router>
-    <Route path="/" component={App}>
+    <Router>
+        <Route path="/" component={App}>
 
-    </Route>
+        </Route>
+        <Route path="/login" component={Login}>
 
-  </Router>
+        </Route>
+    </Router>
 );
 
 React.render(routes, document.getElementById('container'));

@@ -36,7 +36,14 @@ var Header = (function (_super) {
         _super.call(this, props);
     }
     Header.prototype.render = function () {
-        return (React.createElement("div", null, React.createElement("img", {"src": "img/person.png", "style": profile_img}), React.createElement("header", null, React.createElement("h1", {"className": "primary-color", "style": hl}, "Software Developer")), React.createElement("div", {"style": divider})));
+        var header;
+        if (this.props.headerImg) {
+            header = (React.createElement("div", null, React.createElement("img", {"src": this.props.headerImg, "style": profile_img}), React.createElement("header", null, React.createElement("h1", {"className": "primary-color", "style": hl}, "Software Developer")), React.createElement("div", {"style": divider})));
+        }
+        else {
+            header = (React.createElement("div", null, React.createElement("img", {"src": "img/person.png", "style": profile_img}), React.createElement("header", null, React.createElement("h1", {"className": "primary-color", "style": hl}, "Software Developer")), React.createElement("div", {"style": divider})));
+        }
+        return (React.createElement("div", null, header));
     };
     return Header;
 })(React.Component);

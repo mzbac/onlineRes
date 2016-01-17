@@ -27,21 +27,19 @@ var App = React.createClass({
 
     },
     render: function () {
-
-        var t = this.props.children;
         return <div>
             <div className="container" style={mainBlockStyle}>
-                <Header />
+                <Header headerImg={this.state.User.headerImg} />
                 <div className="row">
-                    <Summary summaryProp={this.state.User.summary}/>
-                    <Contacts contactProp={this.state.User.contacts} />
+                    <Summary summaryProp={this.state.User.summary} authorizedId={this.props.location.query.uid}/>
+                    <Contacts contactProp={this.state.User.contacts} authorizedId={this.props.location.query.uid} />
                 </div>
                 <div className="row">
-                    <EduAndExp />
-                    <Skills />
+                    <EduAndExp experienceList={this.state.User.eduExp} authorizedId={this.props.location.query.uid} />
+                    <Skills chartProp={this.state.User.skills} authorizedId={this.props.location.query.uid} />
                 </div>
                 <div className="row">
-                    <Projects />
+                    <Projects projectsList={this.state.User.recentProjects} authorizedId={this.props.location.query.uid} />
                 </div>
             </div>
             <Footer />
@@ -49,7 +47,6 @@ var App = React.createClass({
 
     },
     onChange:function(data){
-        console.log("User Porfile : "+data.User);
         this.setState({User:data.User});
     }
 });

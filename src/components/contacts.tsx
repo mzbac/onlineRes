@@ -21,7 +21,7 @@ export class Contacts extends React.Component<any, any> {
             contacts = (<ul style={contactListStyle}>
                 <li style={contactListLiStyle}>
                     <i className="fa fa-linkedin-square fa-2x"></i>
-                    <span><a style={{color:'#363636'}} href={this.props.contactProp.linkedin}>Linkedin</a></span>
+                    <span><a style={{color:'#363636'}} href={this.props.contactProp.linkedin}>Anchen Li</a></span>
                 </li>
                 <li style={contactListLiStyle}>
                     <i className="fa fa-envelope fa-2x"></i>

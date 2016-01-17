@@ -14,7 +14,16 @@ var Projects = (function (_super) {
         _super.call(this, props);
     }
     Projects.prototype.render = function () {
-        return React.createElement("div", {"className": "col-md-12"}, React.createElement("h2", null, "Recent Projects"), React.createElement("ul", {"className": "work-list"}, React.createElement("li", {"style": ProjectLiStyle}, "#1"), React.createElement("li", {"style": ProjectLiStyle}, "#2"), React.createElement("li", {"style": ProjectLiStyle}, "#3"), React.createElement("li", {"style": ProjectLiStyle}, "#4"), React.createElement("li", {"style": ProjectLiStyle}, "#5")));
+        var projects;
+        if (this.props.projectsList) {
+            projects = this.props.projectsList.map(function (listValue) {
+                return React.createElement("h5", {"style": ProjectLiStyle}, listValue);
+            });
+        }
+        else {
+            projects = (React.createElement("div", null, React.createElement("i", {"className": "fa fa-spinner fa-spin fa-4x fa-fw margin-bottom"})));
+        }
+        return React.createElement("div", {"className": "col-md-12"}, React.createElement("h2", null, "Recent Projects"), projects);
     };
     return Projects;
 })(React.Component);
